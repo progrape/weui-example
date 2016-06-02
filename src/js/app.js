@@ -1,6 +1,6 @@
 import Router from 'router';
 import attachFastClick from 'fastclick';
-import 'weui';
+//import 'weui';
 import './app.less';
 import Home from './home/home';
 import Register from './register/register';
