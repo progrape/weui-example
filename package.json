@@ -52,6 +52,7 @@
         "webpack-dev-server": "^1.14.1"
     },
     "dependencies": {
+        "fastclick": "^1.0.6",
         "jquery": "^2.2.4",
         "router": "git+https://github.com/progrape/router.git",
         "weui.js": "^0.2.1"
