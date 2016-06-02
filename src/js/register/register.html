@@ -1,0 +1,32 @@
+<form id="registerForm">
+    <div class="weui_cells_title">用户注册</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">用户名</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input type="text" name="username" class="weui_input" required placeholder="请输入用户名">
+            </div>
+            <div class="weui_cell_ft">
+                <i class="weui_icon_warn"></i>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label for="" class="weui_label">密码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input type="password" name="password" class="weui_input" required pattern="[\w]{6,}" notMatchTips="密码至少6位" placeholder="请输入密码">
+            </div>
+            <div class="weui_cell_ft">
+                <i class="weui_icon_warn"></i>
+            </div>
+        </div>
+    </div>
+    <p class="weui_cells_tips">在微信里面其实可以调网页授权的</p>
+
+    <div class="weui_btn_area">
+        <a href="javascript:;" class="weui_btn weui_btn_primary js_btn">注册</a>
+    </div>
+</form>
