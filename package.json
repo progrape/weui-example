@@ -52,6 +52,7 @@
         "webpack-dev-server": "^1.14.1"
     },
     "dependencies": {
+        "art-template": "^3.0.3",
         "fastclick": "^1.0.6",
         "jquery": "^2.2.4",
         "router": "git+https://github.com/progrape/router.git",
