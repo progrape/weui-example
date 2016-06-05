@@ -1,62 +1,63 @@
 {
-  "name": "weui-example",
-  "version": "1.0.0",
-  "description": "weui-example",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --hot --inline --progresas --colors --port 8080",
-    "build": "npm run clean && NODE_ENV=production webpack --progress --colors",
-    "deploy": "npm run build && gh-pages -d dist",
-    "pretest": "npm run lint",
-    "lint": "eslint src/**/*.js",
-    "clean": "rimraf ./dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/progrape/weui-example.git"
-  },
-  "keywords": [],
-  "author": "jf <xingzhewujiang1999@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/progrape/weui-example/issues"
-  },
-  "homepage": "https://github.com/progrape/weui-example#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "babel-core": "^6.9.0",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-syntax-object-rest-spread": "^6.8.0",
-    "babel-plugin-transform-class-properties": "^6.9.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-3": "^6.5.0",
-    "css-loader": "^0.23.1",
-    "eslint": "^2.10.2",
-    "eslint-plugin-react": "^5.1.1",
-    "file-loader": "^0.8.5",
-    "gh-pages": "^0.11.0",
-    "html-webpack-plugin": "^2.17.0",
-    "husky": "^0.11.4",
-    "json-loader": "^0.5.4",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "mocha": "^2.4.5",
-    "open-browser-webpack-plugin": "0.0.2",
-    "postcss-loader": "^0.9.1",
-    "raw-loader": "^0.5.1",
-    "rimraf": "^2.5.2",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "dependencies": {
-    "art-template": "^3.0.3",
-    "fastclick": "^1.0.6",
-    "jquery": "^2.2.4",
-    "router": "git+https://github.com/progrape/router.git",
-    "weui.js": "^0.2.1"
-  }
+    "name": "weui-example",
+    "version": "1.0.0",
+    "description": "weui-example",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --config webpack.config.js --hot --inline --progresas --colors --port 8080",
+        "build": "npm run clean && NODE_ENV=production webpack --progress --colors",
+        "deploy": "npm run build && gh-pages -d dist",
+        "pretest": "npm run lint",
+        "lint": "eslint src/**/*.js",
+        "clean": "rimraf ./dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/progrape/weui-example.git"
+    },
+    "keywords": [],
+    "author": "jf <xingzhewujiang1999@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/progrape/weui-example/issues"
+    },
+    "homepage": "https://github.com/progrape/weui-example#readme",
+    "devDependencies": {
+        "autoprefixer": "^6.3.6",
+        "babel-core": "^6.9.0",
+        "babel-loader": "^6.2.4",
+        "babel-plugin-syntax-object-rest-spread": "^6.8.0",
+        "babel-plugin-transform-class-properties": "^6.9.0",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-preset-es2015": "^6.9.0",
+        "babel-preset-react": "^6.5.0",
+        "babel-preset-stage-3": "^6.5.0",
+        "css-loader": "^0.23.1",
+        "eslint": "^2.10.2",
+        "eslint-plugin-react": "^5.1.1",
+        "file-loader": "^0.8.5",
+        "gh-pages": "^0.11.0",
+        "html-webpack-plugin": "^2.17.0",
+        "husky": "^0.11.4",
+        "json-loader": "^0.5.4",
+        "less": "^2.7.1",
+        "less-loader": "^2.2.3",
+        "mocha": "^2.4.5",
+        "open-browser-webpack-plugin": "0.0.2",
+        "postcss-loader": "^0.9.1",
+        "raw-loader": "^0.5.1",
+        "rimraf": "^2.5.2",
+        "style-loader": "^0.13.1",
+        "url-loader": "^0.5.7",
+        "vconsole": "^1.3.0",
+        "webpack": "^1.13.1",
+        "webpack-dev-server": "^1.14.1"
+    },
+    "dependencies": {
+        "art-template": "^3.0.3",
+        "fastclick": "^1.0.6",
+        "jquery": "^2.2.4",
+        "router": "git+https://github.com/progrape/router.git",
+        "weui.js": "^0.2.1"
+    }
 }
