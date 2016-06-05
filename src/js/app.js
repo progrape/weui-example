@@ -31,7 +31,7 @@ $.getJSON('https://weui.io/api/sign?url=' + location.href).success((res) => {
     wx.onMenuShareAppMessage({
         title: 'WeUI',
         desc: 'WeUI, 为微信 Web 服务量身设计', // 分享描述
-        link: 'https://weui.io/example', // 分享链接
+        link: encodeURIComponent(location.href.split('#')[0]), // 分享链接
         imgUrl: 'https://mmrb.github.io/avatar/bear.jpg', // 分享图标
         success: function () {
 
