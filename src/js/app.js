@@ -36,4 +36,5 @@ $.getJSON('https://weui.io/api/sign?url=' + encodeURIComponent(location.href.spl
     };
     wx.onMenuShareAppMessage(option);
     wx.onMenuShareTimeline(option);
+    wx.onMenuShareQQ(option);
 });
