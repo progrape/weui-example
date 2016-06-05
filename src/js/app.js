@@ -28,16 +28,12 @@ $.getJSON('https://weui.io/api/sign?url=' + encodeURIComponent(location.href.spl
         ]
     });
 
-    wx.onMenuShareAppMessage({
+    const option = {
         title: 'WeUI',
-        desc: 'WeUI, 为微信 Web 服务量身设计', // 分享描述
-        link: 'https://weui.io/example', // 分享链接
-        imgUrl: 'https://mmrb.github.io/avatar/bear.jpg', // 分享图标
-        success: function () {
-
-        },
-        cancel: function () {
-
-        }
-    });
+        desc: 'WeUI, 为微信 Web 服务量身设计',
+        link: 'https://weui.io/example',
+        imgUrl: 'https://mmrb.github.io/avatar/bear.jpg'
+    };
+    wx.onMenuShareAppMessage(option);
+    wx.onMenuShareTimeline(option);
 });
