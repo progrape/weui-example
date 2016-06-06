@@ -6,11 +6,19 @@ import Home from './home/home';
 import Register from './register/register';
 import Profile from './profile/profile';
 import Setting from './setting/setting';
+import List from './list/list';
 
 attachFastClick.attach(document.body);
 
 const router = new Router();
-router.push(Home).push(Register).push(Profile).push(Setting).setDefault('/').init();
+router
+    .push(Home)
+    .push(Register)
+    .push(Profile)
+    .push(Setting)
+    .push(List)
+    .setDefault('/')
+    .init();
 
 if (NODE_ENV === 'production') {
     $.getJSON('https://weui.io/api/sign?url=' + encodeURIComponent(location.href.split('#')[0])).success((res) => {
