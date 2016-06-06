@@ -46,6 +46,10 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         }),
+        new webpack.DefinePlugin({
+            NODE_ENV: '"development"',
+            'process.env.NODE_ENV': '"development"'
+        }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src/index.html')
         }),

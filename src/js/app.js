@@ -12,29 +12,31 @@ attachFastClick.attach(document.body);
 const router = new Router();
 router.push(Home).push(Register).push(Profile).push(Setting).setDefault('/').init();
 
-$.getJSON('https://weui.io/api/sign?url=' + encodeURIComponent(location.href.split('#')[0])).success((res) => {
-    wx.config({
-        debug: false,
-        appId: res.appid,
-        timestamp: res.timestamp,
-        nonceStr: res.nonceStr,
-        signature: res.signature,
-        jsApiList: [
-            'onMenuShareTimeline',
-            'onMenuShareAppMessage',
-            'onMenuShareQQ',
-            'onMenuShareWeibo',
-            'onMenuShareQZone'
-        ]
-    });
+if (NODE_ENV === 'production') {
+    $.getJSON('https://weui.io/api/sign?url=' + encodeURIComponent(location.href.split('#')[0])).success((res) => {
+        wx.config({
+            debug: false,
+            appId: res.appid,
+            timestamp: res.timestamp,
+            nonceStr: res.nonceStr,
+            signature: res.signature,
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'onMenuShareQZone'
+            ]
+        });
 
-    const option = {
-        title: 'WeUI',
-        desc: 'WeUI, 为微信 Web 服务量身设计',
-        link: 'https://weui.io/example',
-        imgUrl: 'https://mmrb.github.io/avatar/bear.jpg'
-    };
-    wx.onMenuShareAppMessage(option);
-    wx.onMenuShareTimeline(option);
-    wx.onMenuShareQQ(option);
-});
+        const option = {
+            title: 'WeUI',
+            desc: 'WeUI, 为微信 Web 服务量身设计',
+            link: 'https://weui.io/example',
+            imgUrl: 'https://mmrb.github.io/avatar/bear.jpg'
+        };
+        wx.onMenuShareAppMessage(option);
+        wx.onMenuShareTimeline(option);
+        wx.onMenuShareQQ(option);
+    });
+}
