@@ -34,6 +34,7 @@ $.fn.pull = function (options) {
 
     const defaults = $.extend({
         offset: 40,
+        threshold: 100,
         onRefresh: (callback) => {
             callback(null);
         }
@@ -41,9 +42,8 @@ $.fn.pull = function (options) {
 
     let start;
     let end;
-    let diff;
     $(this).on('touchstart', function (e) {
-        if (getScrollTop() == 0) {
+        if (getScrollTop() <= 0) {
             // 记录开始点
             start = e.originalEvent.touches[0].pageY;
             end = 0;
@@ -52,7 +52,7 @@ $.fn.pull = function (options) {
             $('.weui_pull_tips').find('span').text('下拉刷新').siblings('i').hide();
         }
     }).on('touchmove', function (e) {
-        if ($('body').scrollTop() <= 0) {
+        if (getScrollTop() <= 0) {
             end = e.originalEvent.touches[0].pageY;
             if (start < end) {
                 e.preventDefault();
@@ -60,23 +60,22 @@ $.fn.pull = function (options) {
                 setTranslate($(this), end - start - defaults.offset);
             }
         }
-
     }).on('touchend', function (e) {
-
-
-        // 如果下拉超过此距离, 才触发刷新, 否则直接弹回去
-        if (end - start >= 100) {
-            setTransition($(this), .3);
-            setTranslate($(this), 0);
-            $('.weui_pull_tips').find('span').text('刷新中').siblings('i').show();
-            typeof defaults.onRefresh === 'function' && defaults.onRefresh.call($(this), (err) => {
+        if (getScrollTop() <= 0) {
+            // 如果下拉超过此距离, 才触发刷新, 否则直接弹回去
+            if (end - start >= defaults.threshold) {
+                setTransition($(this), .3);
+                setTranslate($(this), 0);
+                $('.weui_pull_tips').find('span').text('刷新中').siblings('i').show();
+                typeof defaults.onRefresh === 'function' && defaults.onRefresh.call($(this), (err) => {
+                    setTransition($(this), .3);
+                    setTranslate($(this), 0 - defaults.offset);
+                });
+            }
+            else {
                 setTransition($(this), .3);
                 setTranslate($(this), 0 - defaults.offset);
-            });
-        }
-        else {
-            setTransition($(this), .3);
-            setTranslate($(this), 0 - defaults.offset);
+            }
         }
     });
 };
