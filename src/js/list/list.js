@@ -14,6 +14,10 @@ export default {
         });
     },
     bind: function () {
-        $('.weui_pull').pull();
+        $('.weui_pull').pull({
+            onRefresh: function (callback){
+                setTimeout(callback, 1000);
+            }
+        });
     }
 };
