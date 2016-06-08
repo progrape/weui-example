@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'weui.js';
 import tpl from 'raw!./register.html';
-import style from './register.less';
 
 export default {
     url: '/register',

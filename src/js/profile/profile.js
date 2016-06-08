@@ -8,9 +8,7 @@ export default {
     url: '/profile',
     className: 'profile',
     render: function () {
-        return template.compile(tpl)({
-            styles: styles
-        });
+        return tpl;
     },
     bind: function () {
         $(this).on('click', '#avatarCell', function () {
