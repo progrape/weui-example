@@ -1,6 +1,7 @@
 import Router from 'router';
 import 'vconsole';
 import attachFastClick from 'fastclick';
+import 'weui';
 import './app.less';
 import Home from './home/home';
 import Register from './register/register';
