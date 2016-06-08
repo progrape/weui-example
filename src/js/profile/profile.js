@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'weui.js';
 import template from 'art-template/dist/template-debug';
 import tpl from 'raw!./profile.html';
-import styles from './profile.less';
+import './profile.less';
 
 export default {
     url: '/profile',

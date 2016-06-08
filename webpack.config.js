@@ -25,7 +25,7 @@ module.exports = {
             }, {
                 test: /\.less$/,
                 exclude: /node_modules/,
-                loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]_[hash:base64:5]!postcss!less'
+                loader: 'style!css!postcss!less'
             }, {
                 test: /\.(png|jpg|jpeg|gif)/,
                 exclude: /node_modules/,
