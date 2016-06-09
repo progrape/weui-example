@@ -57,7 +57,7 @@ $.fn.pull = function (options) {
             if (start < end) {
                 e.preventDefault();
                 setTransition($(this), 0);
-                setTranslate($(this), end - start - defaults.offset);
+                setTranslate($(this), (end - start - defaults.offset) * .6);
             }
         }
     }).on('touchend', function (e) {
