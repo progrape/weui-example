@@ -1,4 +1,8 @@
-:global{
+.swiper-wrapper {
+    overflow: hidden;
+}
+
+:global {
     .swiper {
         height: 200px;
         overflow: hidden;
@@ -12,14 +16,14 @@
         overflow: hidden;
         float: left;
 
-        &.active{
-            .animated{
+        &.active {
+            .animated {
                 animation-fill-mode: both;
                 opacity: 1;
             }
         }
-        &:not(.active){
-            .animated{
+        &:not(.active) {
+            .animated {
                 animation: none;
                 opacity: 0;
             }
