@@ -6,6 +6,7 @@ import Home from './home/home';
 import Register from './register/register';
 import Profile from './profile/profile';
 import Setting from './setting/setting';
+import Check from './check/check';
 import List from './list/list';
 
 attachFastClick.attach(document.body);
@@ -16,6 +17,7 @@ router
     .push(Register)
     .push(Profile)
     .push(Setting)
+    .push(Check)
     .push(List)
     .setDefault('/')
     .init();
