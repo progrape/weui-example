@@ -8,6 +8,7 @@ import Profile from './profile/profile';
 import Setting from './setting/setting';
 import Swiper from './swiper/swiper';
 import Check from './check/check';
+import Uploader from './uploader/uploader';
 import List from './list/list';
 
 attachFastClick.attach(document.body);
@@ -20,6 +21,7 @@ router
     .push(Swiper)
     .push(Setting)
     .push(Check)
+    .push(Uploader)
     .push(List)
     .setDefault('/')
     .init();

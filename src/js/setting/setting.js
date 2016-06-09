@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'weui.js';
 import tpl from 'raw!./setting.html';
 import styles from './setting.less';
