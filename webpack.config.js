@@ -7,7 +7,8 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
     context: path.join(__dirname, 'src/js'),
     entry: {
-        js: './app.js'
+        js: './app.js',
+        vendor: ['jquery', 'weui.js', 'router', 'iswiper', 'art-template/dist/template-debug', 'vconsole']
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -63,6 +64,7 @@ module.exports = {
             NODE_ENV: '"production"',
             'process.env.NODE_ENV': '"production"'
         }),
+        new webpack.optimize.CommonsChunkPlugin('vendor','vendor.bundle.js'),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false

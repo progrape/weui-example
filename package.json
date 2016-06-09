@@ -56,6 +56,7 @@
     "dependencies": {
         "art-template": "^3.0.3",
         "fastclick": "^1.0.6",
+        "iswiper": "^1.4.1",
         "jquery": "^2.2.4",
         "router": "git+https://github.com/progrape/router.git",
         "weui.js": "^0.2.1"
