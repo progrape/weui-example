@@ -51,6 +51,7 @@ module.exports = {
             NODE_ENV: '"development"',
             'process.env.NODE_ENV': '"development"'
         }),
+        new webpack.optimize.CommonsChunkPlugin('vendor','vendor.bundle.js'),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src/index.html')
         }),
