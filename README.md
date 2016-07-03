@@ -1,6 +1,6 @@
 ### weui-example
 
-WeUI 示例 https://weui.io/example
+用作呈现 weui 的场景示例、应用示例等
 
 #### 目录结构
 
