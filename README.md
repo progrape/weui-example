@@ -21,10 +21,10 @@ WeUI 示例 https://weui.io/example
 │       ├── register
 │       ├── setting
 │       └── swiper
-└── webpack.config.js
+└── webpack.config.js                       # webpack 配置文件
 ```
 
-本示例是单页面应用，使用 [https://github.com/progrape/router](router) 简单的路由方案。每个功能页面对应一个路由配置。
+本示例是单页面应用，使用 [https://github.com/progrape/router](router) 简单的路由方案（demo用途）。每个功能页面对应一个路由配置。
 
 例如首页：
 
