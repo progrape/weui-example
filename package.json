@@ -7,8 +7,6 @@
         "start": "webpack-dev-server --config webpack.config.js --hot --inline --progresas --colors --port 8080",
         "build": "npm run clean && NODE_ENV=production webpack --progress --colors",
         "deploy": "npm run build && gh-pages -d dist",
-        "pretest": "npm run lint",
-        "lint": "eslint src/**/*.js",
         "clean": "rimraf ./dist"
     },
     "repository": {
